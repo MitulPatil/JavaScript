@@ -21,7 +21,7 @@ console.log(othernumber.toPrecision(3));
 
 
 const hundreds=10000000
-console.log(hundreds.toLocaleString()); //give output on us baised
+console.log(hundreds.toLocaleString()); //give output on US baised
 console.log(hundreds.toLocaleString('en-IN')); 
 
 
