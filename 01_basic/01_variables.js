@@ -4,7 +4,7 @@ var accountPassWord="27643"
 accountCity="vadodara"
 let accountState
 
-// accountId=2 //not allowed
+// accountId=2 //not allowed because you can't change constant value
 
 accountEmail="ksdlgmail.com"
 accountPassword="6546546"
