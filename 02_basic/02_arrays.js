@@ -6,7 +6,7 @@ marvel_heros.push(Dc_heros)
 console.log(marvel_heros);
 console.log(marvel_heros[3][1]);
 
-const allHeros = marvel_heros.concat(Dc_heros) // thi method returns new array
+const allHeros = marvel_heros.concat(Dc_heros) // this method returns new array
 console.log(allHeros);
 
 const all_new_Heros = [...marvel_heros, ...Dc_heros]  //spread operator 
