@@ -31,7 +31,7 @@ console.log(user[mysyb]);
 user.email = "pqr@google.com"
 console.log(user);
 
-//Object.freeze(user) // you can't change further 
+//Object.freeze(user) // you can't make change further 
 
 user.email = "new@google.com"
 console.log(user);
