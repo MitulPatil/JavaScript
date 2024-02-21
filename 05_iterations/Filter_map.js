@@ -5,7 +5,7 @@
 //     return item
 // })
 
-// console.log(values);->//undefined  // forEch is not return anything
+// console.log(values);->//undefined  // forEach is not return anything
 
 // filter
 // mainly it used for check condition is 
