@@ -8,7 +8,7 @@
 // console.log(values);->//undefined  // forEach is not return anything
 
 // filter
-// mainly it used for check condition is 
+// mainly it is used for check condition and filter the value from given condition 
 // it return values
 const mynumber = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
 
