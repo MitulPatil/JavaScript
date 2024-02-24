@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').
+        appendChild(li)   // this mathod traverse whole tree and then add element at the end
+    }
+    addLanguage('python')
+    addLanguage("c++")
+
+    function addOptilanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptilanguage('golang')
+    
+    //Edit
+    const secondlang=document.querySelector("li:nth-child(2)")
+    console.log(secondlang);
+    // secondlang.innerHTML = 'Mojo'
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondlang.replaceWith(newli)
+
+    //edit
+    const firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML = '<li>ruby</li>'
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+    
+</script>
+</html>
