@@ -22,9 +22,9 @@
    </div>
 </body>
 <script>
-    // document.getElementById('owl').onclick = function(){
-    //     alert("owl clicked");
-    // }
+    document.getElementById('owl').onclick = function(){
+        alert("owl clicked");
+    }
     
     // attachEvent()
     // jQuery - on
@@ -43,11 +43,64 @@
     //                                      environment type
 
     // importent event:
+
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // event Propagation
+
+    // event propagation 
+
+    // event Propagation context :  event bubbling -> false // it is default event propagation 
+    //                              event capturing -> true
+    
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }, false)
+
+    // to prevent bubbling use: stopPropagation()
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation();
+    }, false)
+
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, true)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }, true)
+
+    // // to prevent default behavior: prevrntDefault()
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("clicked google");
+    })
+
+    // to find parent tag: parentNode
+    
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);  
+        // console.log(e.target.tagName);
+        
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove()
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt)
+    },false)
+
 </script>
 </html>
